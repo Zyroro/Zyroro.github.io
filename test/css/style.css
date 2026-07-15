@@ -1,0 +1,221 @@
+/* ============================================
+Test 1: Animations
+============================================= */
+#animation1 {
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    animation: anim1 4s ease-in infinite;
+}
+
+#animation2 {
+    position: relative;
+    margin-top: 40px;
+    animation: anim2 3s infinite;
+}
+
+#animation3 {
+    margin-top: 50px;
+    height: 60px;
+    overflow: hidden;
+}
+
+#animation3 > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: max-content;
+    padding: 0 10px;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
+
+#animation3 > div > div:first-child {
+    animation: anim3 5s linear infinite;
+}
+
+#animation3 div div {
+    background-color: #00a100;
+}
+
+#animation3 div:first-child div {
+    background-color: #b90000;
+}
+
+#animation3 div:last-child div {
+    background-color: #18d1ff;
+}
+
+#animation4 span
+{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    animation: anim4 3s linear infinite;
+}
+
+#animation4 span:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+#animation4 span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#animation4 span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+#animation4 span:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+#animation4 span:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes anim1 {
+    0% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: cyan;
+    }
+
+    100% {
+        background-color: red;
+    }
+}
+
+@keyframes anim2 {
+    0% {
+        left: 0px;
+    }
+    
+    50% {
+        left: 200px;
+        rotate: 180deg;
+    }
+
+    100% {
+        left: 0px;
+        rotate: 0deg;
+    }
+}
+
+@keyframes anim3 {
+    0% {
+        transform: translateY(-283px);
+    }
+
+    5%, 33% {
+        transform: translateY(-200px);
+    }
+
+    38%, 66% {
+        transform: translateY(-100px);
+    }
+
+    71%, 99% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(16px);
+    }
+}
+
+@keyframes anim4 {
+    0%, 100% {
+        transform: scale(1.0);
+        text-shadow: none;
+    }
+
+    25% {
+        rotate: 1deg;
+    }
+
+    50% {
+        transform: scale(1.2);
+        text-shadow: 4px 4px 12px #5c5757;
+        rotate: 0deg;
+    }
+
+    75% {
+        rotate: -1deg;
+    }
+}
+
+/* ============================================
+Test 2: Transitions
+============================================= */
+
+#transition1, #transition2 {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    border: 2px solid #333;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    transition: all 0.35s ease-out;
+    margin-bottom: 20px;
+}
+
+#transition1:hover {
+    color: #fff;
+    background-color: #ff003b;
+}
+
+#transition2 {
+    position: relative;
+    transition: color ease-out 0.5s;
+    z-index: 1;
+}
+
+#transition2:hover {
+    color: #fff;
+}
+
+#transition2:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ff003b;
+    transition: all ease-out 0.35s;
+    z-index: -1;
+}
+
+#transition2:hover:after{
+  width: 100%;
+}
+
+/* ============================================
+Test 3: Sprites
+============================================= */
+
+.sprite-cat {
+     background: url(sprite_sheet.png);
+     display: inline-block;
+     height: 736px;
+     width: 736px;
+     background-position: -20px -20px;
+     overflow: hidden;
+ }
+ .sprite-cat2 {
+     background: url(sprite_sheet.png);
+     display: inline-block;
+     height: 709px;
+     width: 736px;
+     background-position: -796px -20px;
+ }
+
