@@ -1,0 +1,822 @@
+/* ======================================================
+Universal Selectors
+====================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0e0e0e;
+}
+
+/* Custom Font */
+@font-face {
+    font-family: MatchaMint;
+    src: url(fonts/SuperBouncer.ttf);
+}
+
+@font-face {
+    font-family: BoringTime;
+    src: url(fonts/BoringTime.otf);
+}
+
+/* ======================================================
+Top Header And Bottom Footer Selectors
+====================================================== */
+
+#top_header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #141414;
+    color: #ffffff;
+    font-family: MatchaMint, sans-serif;
+    font-size: 1.1em;
+}
+
+#top_header > h1 {
+    margin-left: 2rem;
+    font-weight: lighter;
+    user-select: none;
+}
+
+#top_header ul {
+    display: flex;
+    list-style: none;
+}
+
+#top_header ul li {
+    margin: 0 0.6rem;
+}
+
+#top_header ul li button {
+    all: unset; /* Reset All Properties Of The Button For Redesign */
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.2rem 1.0rem;
+    border-radius: 10px;
+    transition: color 0.25s ease-in;
+}
+
+#top_header ul li button:hover {
+    background-color: #3f3f3f;
+    color: #ff6464;
+}
+
+#top_header ul li button:hover:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.8rem;
+    background-color: #ff6464;
+    width: 100%;
+    padding: 0.1rem 0;
+}
+
+#bot_footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #0e0e0e;
+    color: #b3b3b3;
+    padding-top: 1rem;
+}
+
+#bot_footer a {
+    color: #cccccc;
+    margin-top: 0.3rem;
+}
+
+/* ======================================================
+Home Page Selectors
+====================================================== */
+
+#introduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.1) 0%,
+            rgba(0, 0, 0, 0.2) 15%,
+            rgba(0, 0, 0, 0.5) 30%,
+            rgba(0, 0, 0, 0.8) 80%,
+            rgba(0, 0, 0, 0.95) 100%
+        ), url(images/introduction_bg.jpg);
+    background-size: cover;
+    background-position: center, center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+#introduction section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    margin-bottom: 14rem;
+}
+
+#introduction section > h2 {
+    font-weight: lighter;
+    margin: 0;
+}
+
+#introduction section > button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ffffff;
+    font-size: 0.9em;
+    background-color: #141414;
+    position: relative;
+    transition: color ease-out 0.5s;
+    z-index: 1;
+}
+
+#introduction section > button:hover {
+    color: #000000;
+}
+
+#introduction section > button:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffffff;
+    transition: all ease-out 0.35s;
+    z-index: -1;
+}
+
+#introduction section > button:hover:after{
+    width: 100%;
+}
+
+#football {
+    width: 20vmin;
+    height: 20vmin;
+    background: url(images/football.jpg);
+    background-size: 300%;
+    margin-bottom: 3rem;
+    border-radius: 50%;
+    animation: football 30s linear infinite;
+    box-shadow:
+        calc(20vmin * -0.04) 
+        0 
+        calc(20vmin * 0.03)
+        calc(20vmin * 0.01)
+        #040615 inset,
+        calc(20vmin * 0.03) 
+        calc(20vmin * 0.02) 
+        calc(20vmin * 0.03)
+        calc(20vmin * 0.02)
+        #040615 inset;
+}
+
+@keyframes football {
+    0% {
+        background-position: 120% 0;
+        rotate: 0deg;
+    }
+
+    100% {
+        background-position: -80% 0;
+        rotate: 10deg;
+    }
+}
+
+/* ======================================================
+History Page Selectors
+====================================================== */
+
+#history_banner {
+    width: 100%;
+    height: 25vh;
+    background: url(images/history_footer.jpg);
+    background-position: 0 -100px;
+    background-repeat: no-repeat;
+    border-bottom: solid 5px #141414;
+}
+
+#history_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #065488;
+    color: white;
+    font-size: 1.5em;
+    padding-bottom: 4rem;
+}
+
+#history_container > h2 {
+    margin-bottom: 0;
+}
+
+#history_container > div {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+
+#history_container > div > article {
+    background: #3f3f3f;
+    width: 30%;
+    margin: 0.5rem 2rem;
+    border-radius: 10px;
+    font-size: 0.9em;
+    height: 75vh;
+}
+
+.card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flipped {
+    transform: rotateY(180deg);
+}
+
+.front_card, .back_card {
+    position: absolute;
+    backface-visibility: hidden;
+    padding: 1rem 3rem 4rem;
+}
+
+.back_card {
+    transform: rotateY(180deg);
+}
+
+/* ======================================================
+Technique Page Selectors
+====================================================== */
+
+#technique_page > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.3em;
+    width: 100%;
+    background-color: #cc8500;
+    color: white;
+}
+
+#technique_page > div > article {
+    background-color: #a5572a;
+    width: 80%;
+    height: 67.9vh;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+}
+
+#technique_page > div > article > h2 {
+    font-family: BoringTime, sans-serif;
+}
+
+#technique_page button {
+    margin: 1.7rem;
+    padding: 1.5rem 3rem;
+    background-color: #a5572a;
+    color: #ffffff;
+    border: #a5572a;
+    font-size: 0.9em;
+}
+
+#technique_page button:active {
+    background-color: #7a411f;
+}
+
+#technique_img {
+    margin-top: 1.0rem;
+}
+
+/* ======================================================
+Reowned Team Page Selectors
+====================================================== */
+
+#team_page {
+    font-size: 1.4em;
+}
+
+#team_page > div {
+    padding: 2.5rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    transition: all 0.35s;
+}
+
+#real_madrid {
+    background-color: #0A2A66;
+    color: #ffffff;
+}
+
+#barcelona {
+    background-color: #cc8500;
+    color: #ffffff;
+}
+
+#liverpool {
+    background-color: #7a7a7a;
+    color: #ffffff;
+}
+
+#sprite-barcelona {
+    background: url(images/sprite_sheet.png);
+    display: inline-block;
+    height: 200px;
+    width: 267px;
+    background-position: -0px -0px;
+}
+
+#sprite-liverpool {
+    background: url(images/sprite_sheet.png);
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    background-position: -0px -200px;
+}
+
+#sprite-real_madrid {
+    background: url(images/sprite_sheet.png);
+    display: inline-block;
+    height: 200px;
+    width: 245px;
+    background-position: -0px -400px;
+}
+
+#fun_button {
+    background-color:#141414;
+    border: #141414;
+    color: white;
+    padding: 0.4rem 0.7rem;
+}
+
+#fun_button:active {
+    background-color: #3f3f3f;
+}
+
+.fun_animation {
+    animation: spin 2s linear infinite;
+}
+
+.fun_animation2 {
+    animation: lol 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes lol {
+    0% {
+        background-color: #cc8500;
+    }
+
+    25% {
+        rotate: 10deg;
+    }
+
+    50% {
+        background-color: #7a7a7a;
+        scale: 1.5;
+        rotate: 0deg;
+    }
+
+    75% {
+        rotate: -10deg
+    }
+
+    100% {
+        background-color: #cc8500;
+        rotate: 0deg
+    }
+}
+
+/* ======================================================
+Minigame Selectors
+====================================================== */
+
+#info {
+    display: flex;
+    gap: 1rem;
+}
+
+#scoreboard {
+    padding: 0.8rem 2rem;
+    margin: 0;
+    background-color: #0f0f0f88;
+    border: solid 2px #000000;
+    font-size: 1.3em;
+    margin-top: 1rem;
+}
+
+#reset_button {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 100%)
+}
+
+#minigame_page > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 2rem 2rem;
+    color: white;
+    background-color: #00c3ff;
+}
+
+#minigame_page > div > header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000077;
+    border: solid 2px #000000;
+    padding: 0.8rem 2rem;
+    border-radius: 10px;
+}
+
+#minigame_page > div > header > h2 {
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+#field {
+    position: relative;
+    width: 80%;
+    aspect-ratio: 100 / 43;
+    margin-bottom: 2rem;
+    padding: 3.5rem;
+    background-color: #16aa61;
+    box-shadow: 0 10px 18px #000000c2;
+}
+
+#inner {
+    position: relative;
+    border: solid 4px white;
+    width: 100%;
+    height: 100%;
+}
+
+#middle_line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, 0);
+    height: 100%;
+    width: 4px;
+    background: white;
+}
+
+#middle_circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 15%;
+    aspect-ratio: 1;
+    border: solid 4px white;
+    border-radius: 50%;
+}
+
+#left_goal, #right_goal {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 5%;
+    height: 35%;
+    border: solid 4px white;
+}
+
+#left_goal {
+    left: 0;
+    border-left: none;
+}
+
+#right_goal {
+    right: 0;
+    border-right: none;
+}
+
+#player, #goalkeeper, #ball {
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    width: 2.7%;
+}
+
+#player {
+    background-color: #00fff2;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+}
+
+#goalkeeper {
+    background-color: #db1414;
+    width: 3.5%;
+}
+
+#ball {
+    background-color: #000000;
+    width: 1.5%;
+}
+
+/* ======================================================
+Quiz Page
+====================================================== */
+#quiz_page {
+    font-size: 1.5em;
+}
+
+#quiz_page > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #065488;
+    color: #ffffff;
+    padding: 1rem 0;
+}
+
+#quiz_page label {
+    margin: 0 1rem;
+}
+
+#quiz_page fieldset {
+    width: 60%;
+    margin: 1rem 0;
+}
+
+#quiz_page input {
+    margin: 1rem;
+}
+
+#verification {
+    padding: 0.5rem;
+}
+
+#submit_button {
+    font-size: 0.8em;
+    padding: 0.6rem 1rem;
+}
+
+#score_box {
+    margin-bottom: 0;
+}
+
+#qr_code {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* ======================================================
+Responsive
+====================================================== */
+
+.responsive {
+    max-width: 100%;
+}
+
+#hamburger_menu {
+    all: unset;
+    display: none;
+    width: 5vmin;
+    height: 5vmin;
+    margin-right: 2rem;
+    font-size: 1.6em;
+    border-radius: 50%;
+}
+
+#hamburger_menu:active {
+    background-color: #474747;
+}
+
+#menu_overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: #0000004d;
+    backdrop-filter: blur(2px);
+    z-index: 97;
+}
+
+@media (max-width: 1280px) /* Fixes The Some Stuff So My Website Doesn't Break Whenever I Open F12 */
+{
+    #top_header ul li button {
+        font-size: 1.05em;
+    }
+
+    #top_header > h1 {
+        font-size: 1.5em;
+    }
+
+    #introduction section {
+        font-size: 1.6em;
+    }
+
+    #history_container > div {
+        flex-wrap: wrap;
+    }
+
+    #history_container > div > article {
+        width: 80%;
+    }
+
+    #inner {
+        border: solid 2px white;
+    }
+
+    #middle_line {
+        width: 2px;
+    }
+
+    #middle_circle {
+        border: solid 2px white;
+    }
+
+    #left_goal, #right_goal {
+        border: solid 2px white;
+    }
+
+    #left_goal {
+        border-left: none;
+    }
+
+    #right_goal {
+        border-right: none;
+    }
+}
+
+@media (max-width: 801px)
+{
+    /* ======================================================
+    The Top Header Menu
+    ====================================================== */
+    #hamburger_menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #top_header {
+        position: relative;
+        justify-content: space-between;
+        z-index: 99;
+    }
+
+    #top_header ul {
+        position: absolute;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, 0);
+        background-color: #141414;
+        font-size: 1.5em;
+        margin: 0;
+        padding: 1rem 10rem;
+        z-index: 98;
+    }
+
+    #top_header ul li {
+        margin: 1rem 0;
+    }
+
+    #top_header ul.show {
+        display: flex;
+    }
+
+    #menu_overlay.show {
+        display: block;
+    }
+
+    /* ======================================================
+    Introduction Page Selectors
+    ====================================================== */
+    #introduction {
+        font-size: 0.85em;
+    }
+
+    /* ======================================================
+    Introduction Page Selectors
+    ====================================================== */
+    #history_page {
+        font-size: 0.75em;
+    }
+
+    #history_container > div > article {
+        height: 95vh;
+    }
+
+    /* ======================================================
+    Techniques Page Selectors
+    ====================================================== */
+    #technique_img {
+        display: none;
+    }
+
+    /* ======================================================
+    Reowned Team Page Selectors
+    ====================================================== */
+    #team_page > div {
+        flex-direction: column;
+    }
+
+    /* ======================================================
+    Minigame Selectors
+    ====================================================== */
+    #field {
+        width: 100%;
+        aspect-ratio: 50 / 43;
+    }
+
+    #middle_line {
+        display: none;
+    }
+
+    #right_goal {
+        display: none;
+    }
+
+    #inner {
+        overflow: hidden;
+        border: solid 3px white;
+    }
+
+    #middle_circle {
+        right: 0;
+        left: auto;
+        transform: translate(50%, -50%);
+        width: 30%;
+        border: solid 3px white
+    }
+
+    #left_goal {
+        width: 15%;
+        height: 35%;
+        border: solid 3px white;
+        border-left: none;
+    }
+
+    #goalkeeper, #player {
+        width: 6.5%;
+    }
+
+    #player {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #goalkeeper {
+        width: 7.8%;
+    }
+
+    #ball {
+        width: 3.5%;
+    }
+
+    /* ======================================================
+    Quiz Selectors
+    ====================================================== */
+    #quiz_page {
+        font-size: 1.3em;
+    }
+
+    #quiz_page fieldset {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #qr_code {
+        display: none;
+    }
+}
