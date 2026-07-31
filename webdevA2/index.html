@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- Head -->
+    <head>
+        <!-- Title -->
+        <title>XFootball</title>
+
+        <!-- Link To External CSS -->
+        <link href="style.css" type="text/css" rel="stylesheet">
+
+        <!-- Link To External Javascript -->
+        <script src="main.js" defer></script>
+
+        <!-- Favicon -->
+        <link href="images/football_favicon.jpg" type="images/x-icon" rel="icon">
+
+        <!-- Allow Responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+
+        <!-- Allows UTF-8 -->
+        <meta charset="UTF-8">
+
+        <!-- Mobile Fullscreen -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!-- PWA Manifest -->
+        <link rel="manifest" href="manifest.json">
+    </head>
+
+    <!-- Body -->
+    <body>
+        <!-- Header At The Top Of The Page -->
+        <div id="menu_overlay"></div>
+        <header id="top_header">
+
+            <!-- Header -->
+            <h1>XFootball</h1>
+
+            <!-- Hamburger Menu For Responsive -->
+            <button id="hamburger_menu">☰</button>
+
+            <!-- Buttons To Other Pages -->
+            <ul>
+                <li><button>Home</button></li>
+                <li><button>History</button></li>
+                <li><button>Techniques</button></li>
+                <li><button>Clubs</button></li>
+                <li><button>Minigame</button></li>
+                <li><button>Quiz</button></li>
+            </ul>
+        </header>
+
+        <!-- Home Page -->
+        <div id="home_page">
+
+            <!-- Introduction Container -->
+            <div id="introduction">
+
+                <!-- Introduction Section-->
+                <section>
+                    <!-- The Spinning Football Texture -->
+                    <div id="football"></div>
+
+                    <h2>XFootball</h2>
+                    <p>Where you can learn more about football today!</p>
+
+                    <!-- Get Started Button To Send You To History Page -->
+                    <button id="start_button">Get Started</button>
+                </section>
+            </div>
+        </div>
+
+        <!-- History Page -->
+        <div id="history_page">
+
+            <!-- Banner -->
+            <div id="history_banner"></div>
+            
+            <!-- Container For The History Contents -->
+            <div id="history_container">
+                <h2>The History Of Football</h2>
+                <p>Click the cards.</p>
+
+                <!-- Container For The Articles -->
+                <div>
+                    <!-- Origin Card -->
+                    <article class="card">
+                        <!-- Front Side Of The Card-->
+                        <div class="front_card">
+                            <h2>The Origins Of Football</h2>
+                            <img src="images/origin.jpg" title="origin" alt="origin" class="responsive">
+                        </div>
+
+                        <!-- Back side Of The Card -->
+                        <div class="back_card">
+                            <h2>The Origins Of Football</h2>
+                            <p>Over 2,000 years ago, one of the earliest known ball games involving kicking took place in China under the name Cuju. The game was played using a round ball, made of stitched leather with feathers inside, on a field. Cuju was later regarded as one of the earliest ancestors of football.</p>
+                            <p>During the medieval period, England developed a rough version called mob ball, where entire villages competed to move a ball to the opposing side. However, these games lacked the standardised rules and were often violent and chaotic. Some games involved punches of the ball with the fist, laying the foundation for the sport's evolution.</p>
+                        </div>
+                    </article>
+                    
+                    <!-- Birth Of Modern Football Card -->
+                    <article class="card">
+                        <!-- Front Side Of The Card-->
+                        <div class="front_card">
+                            <h2>The Birth Of Modern Football</h2>
+                            <img src="images/modern.jpg" title="modern" alt="modern" class="responsive">
+                        </div>
+
+                        <!-- Back side Of The Card -->
+                        <div class="back_card">
+                           <h2>The Birth of Modern Football</h2>
+                            <p>By the 19th century, football had become popular in English schools, but each school followed its own set of rules. This made matches between schools difficult to organize.</p>
+                            <p>In 1848, the Cambridge Rules introduced one of the first standardised rulebooks. Later, in 1863, the Football Association (FA) was established in England to create a single set of official rules. These rules prohibited carrying the ball and separated football from rugby, marking the beginning of modern association football.</p>
+                            <p>Professional football soon followed, with the first Football League established in 1888, allowing clubs to compete regularly.</p>
+                        </div>
+                    </article>
+
+                    <!-- Football Around The World Card -->
+                    <article class="card">
+                        <!-- Front Side Of The Card-->
+                        <div class="front_card">
+                            <h2>Football Around The World</h2>
+                            <img src="images/around_world.jpg" title="around_world" alt="around_world" class="responsive">
+                        </div>
+
+                        <!-- Back side Of The Card -->
+                        <div class="back_card">
+                            <h2>Football Around the World</h2>
+                            <p>Football spread rapidly across the world through British sailors, merchants, engineers, and soldiers during the 19th century. Countries such as Brazil, Argentina, Spain, Germany, and Italy embraced the sport and developed their own football traditions.</p>
+                            <p>In 1904, FIFA was founded to oversee international football, and the first FIFA World Cup was held in 1930. Today, football is the world's most popular sport, with billions of fans worldwide. Its simple rules, low equipment cost, exciting gameplay, and international competitions have made it a sport enjoyed by people of all ages and cultures.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+        <!-- Techniques Page -->
+        <div id="technique_page">
+            <div>
+                <h2>Techniques</h2>
+
+                <article>
+                    <h2 id="technique_h2">Placeholder</h2>
+                    <p id="technique_p">Placeholder</p>
+                    <img id="technique_img" src="images/passing.jpg" title="image" alt="image" class="responsive">
+                </article>
+
+                <div>
+                    <button id="technique_back">Back</button>
+                    <button id="technique_next">Next</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Reowned Teams Page -->
+        <div id="team_page">
+
+            <!-- Real Madrid -->
+            <div id="real_madrid">
+                <article>
+                    <button id="fun_button">Fun Button</button>
+                    <h2>Real Madrid</h2>
+                    <p>One of the most successful football clubs in history, Real Madrid is renowned for its dominance in European competitions and its tradition of signing world-class players. The club has won the most European Cup titles and Champions League trophies, making it a global symbol of excellence.</p>
+                </article>
+                <aside>
+                    <!-- <img src="images/real_madrid.jpg"> -->
+                    <div id="sprite-real_madrid"></div>
+                </aside>
+            </div>
+
+            <!-- Real Madrid -->
+            <div id="barcelona">
+                <article>
+                    <h2>FC Barcelona</h2>
+                    <p>Barcelona is famous for its possession-based style of play, often called tiki-taka, and its renowned youth academy, La Masia. The club has produced legendary players and has enjoyed decades of success in both Spain and Europe.</p>
+                </article>
+                <aside>
+                    <div id="sprite-barcelona"></div>
+                </aside>
+            </div>
+
+            <!-- Real Madrid -->
+            <div id="liverpool">
+                <article>
+                    <h2>Liverpool FC</h2>
+                    <p>Liverpool is celebrated for its passionate fanbase, historic stadium, and exciting attacking football. The club has won multiple English league championships and European titles throughout its history.</p>
+                </article>
+                <aside>
+                    <div id="sprite-liverpool"></div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- Mini Game Page -->
+        <div id="minigame_page">
+
+            <div>
+                <header>
+                    <h2>Football Minigame</h2>
+                </header>
+
+                <!-- Scoreboard -->
+                <div id="info">
+                    <p id="scoreboard">0 (Highest: 0)</p>
+                </div>
+
+                <!-- Football Field -->
+                <div id="field">
+                    <button id="reset_button">Reset</button> <!-- Minigame Reset Button -->
+                    <button id="fs_button">Full screen</button> <!-- Fullscreen Button On PC -->
+                    <div id="inner">
+                        <!-- Details Of The Field -->
+                        <div id="middle_line"></div>
+                        <div id="middle_circle"></div>
+                        <div id="left_goal"></div>
+                        <div id="right_goal"></div>
+
+                        <!-- Objects On The Field -->
+                        <div id="player"></div>
+                        <div id="goalkeeper"></div>
+                        <div id="ball"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Page -->
+        <div id="quiz_page">
+            <div>
+                <h2>Quiz</h2>
+
+                <!-- First Question -->
+                <fieldset>
+                    <legend>1. Where were the modern Laws of the Game first introduced in 1863?</legend>
+                    <label><input type="radio" name="q1" value="France">France</label>
+                    <label><input type="radio" name="q1" value="England">England</label>
+                    <label><input type="radio" name="q1" value="Scotland">Scotland</label>
+                    <label><input type="radio" name="q1" value="Italy">Italy</label>
+                </fieldset>
+
+                <!-- Second Question -->
+                <fieldset>
+                    <legend>2. The first FIFA World Cup was held in:</legend>
+                    <label><input type="radio" name="q2" value="1904">1904</label>
+                    <label><input type="radio" name="q2" value="1922">1922</label>
+                    <label><input type="radio" name="q2" value="1930">1930</label>
+                    <label><input type="radio" name="q2" value="1938">1938</label>
+                </fieldset>
+
+                <!-- Third Question -->
+                <fieldset>
+                    <legend>3. Which skill involves moving the ball past an opponent while maintaining possession?</legend>
+                    <label><input type="radio" name="q3" value="Dribbling">Dribbling</label>
+                    <label><input type="radio" name="q3" value="Passing">Passing</label>
+                    <label><input type="radio" name="q3" value="Heading">Heading</label>
+                    <label><input type="radio" name="q3" value="Cross">Cross</label>
+                </fieldset>
+
+                <!-- Fourth Question -->
+                <fieldset>
+                    <legend>4. Which club is famous for its youth academy called "La Masia"?</legend>
+                    <label><input type="radio" name="q4" value="Benfica">Benfica</label>
+                    <label><input type="radio" name="q4" value="Liverpool FC">Liverpool FC</label>
+                    <label><input type="radio" name="q4" value="Real Madrid">Real Madrid</label>
+                    <label><input type="radio" name="q4" value="Barcelona">Barcelona</label>
+                </fieldset>
+
+                <!-- Fifth Question -->
+                <fieldset>
+                    <legend>5. Which club has won the most UEFA Champions League titles?</legend>
+                    <label><input type="radio" name="q5" value="Bayern Munich">Bayern Munich</label>
+                    <label><input type="radio" name="q5" value="Liverpool FC">Liverpool FC</label>
+                    <label><input type="radio" name="q5" value="Real Madrid">Real Madrid</label>
+                    <label><input type="radio" name="q5" value="Barcelona">Barcelona</label>
+                </fieldset>
+
+                <!-- Human Verification -->
+                <fieldset>
+                    <legend>Type in "Not Human" to confirm that you're not a robot:</legend>
+                    <input id="verification" type="text">
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button id="submit_button">Submit Quiz</button>
+                <p id="score_box">Score:<p>
+
+                <!-- QR Code (Desktop Exclusive)-->
+                <div id="qr_code">
+                    <h3>Enjoying our website? Share to your friends now:</h3>
+                    <img src="images/qrcode.png" title="qr_code" alt="qr_code">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer At The Bottom Of The Page -->
+        <footer id="bot_footer">
+            <p>Credits:</p>
+            <a target="_blank" href="https://www.vecteezy.com/vector-art/536152-football-grunge-seamless-pattern">football image by Sergey Kandakov</a>
+            <a target="_blank" href="https://www.sportsessionplanner.com/s/9HHV/Crossing-Progression.html">cross image by Coaches Voice</a>
+            <p>© Xadeus Gan 2026 • 颜敬衡</p>
+        </footer>
+    </body>
+</html>
